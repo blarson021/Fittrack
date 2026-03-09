@@ -683,11 +683,11 @@ Respond ONLY with a valid JSON object (no markdown, no backticks, no preamble) i
   );
 
   const s = {
-    app: { fontFamily: "'Sora', sans-serif", background: "#080b14", minHeight: "100vh", color: "white", maxWidth: 480, margin: "0 auto", position: "relative", paddingBottom: 90 },
+    app: { fontFamily: "'Sora', sans-serif", background: "#080b14", minHeight: "100%", color: "white", maxWidth: 480, margin: "0 auto", position: "relative", paddingBottom: "calc(env(safe-area-inset-bottom) + 90px)" },
     header: { padding: "28px 20px 16px", background: "linear-gradient(180deg, #0d1220 0%, transparent 100%)", position: "sticky", top: 0, zIndex: 50, backdropFilter: "blur(20px)" },
     title: { fontSize: 24, fontWeight: 800, letterSpacing: -1, margin: 0, background: "linear-gradient(135deg, #fff 0%, #94a3b8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" },
     subtitle: { fontSize: 12, color: "#475569", marginTop: 3, fontWeight: 500, letterSpacing: 0.3 },
-    nav: { position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: "rgba(8,11,20,0.95)", backdropFilter: "blur(20px)", borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", zIndex: 100, paddingBottom: 4 },
+    nav: { position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: "rgba(8,11,20,0.95)", backdropFilter: "blur(20px)", borderTop: "1px solid rgba(255,255,255,0.06)", display: "flex", zIndex: 100, paddingBottom: "calc(env(safe-area-inset-bottom) + 4px)" },
     navBtn: (active) => ({ flex: 1, padding: "10px 4px 6px", background: "none", border: "none", color: active ? "#6ee7f7" : "#334155", cursor: "pointer", fontSize: 10, fontWeight: 600, display: "flex", flexDirection: "column", alignItems: "center", gap: 4, transition: "all 0.2s", fontFamily: "'Sora', sans-serif", letterSpacing: 0.3 }),
     card: { background: "rgba(255,255,255,0.03)", borderRadius: 20, padding: 20, margin: "10px 16px", border: "1px solid rgba(255,255,255,0.07)", backdropFilter: "blur(10px)" },
     btn: (color = "#38bdf8") => ({ background: color, color: (color === "#38bdf8" || color === "#10b981") ? "#080b14" : "white", border: "none", borderRadius: 12, padding: "12px 18px", fontWeight: 700, fontSize: 14, cursor: "pointer", fontFamily: "'Sora', sans-serif", transition: "all 0.2s", letterSpacing: -0.2 }),
