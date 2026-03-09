@@ -620,7 +620,7 @@ Respond ONLY with a valid JSON object (no markdown, no backticks, no preamble) i
 }`;
 
       // Calls our secure Vercel serverless function — API key stays on the server
-      const response = await fetch("/api/generate-workout", {
+      const response = await fetch("/api/generate-workout.cjs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
